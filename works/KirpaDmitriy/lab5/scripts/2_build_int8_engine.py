@@ -60,7 +60,7 @@ def build_engine():
         config.max_workspace_size = 1 << 30
 
     if builder.platform_has_fast_fp8:
-        print("Enabling FP16...")
+        print("Enabling FP8...")
         config.set_flag(trt.BuilderFlag.FP8)
 
     with open(ONNX_FILE, 'rb') as model:
